@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will you be my date the day after Valentine's?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #FFD700;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: glow 1.5s infinite alternate;
+            position: relative;
+        }
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #FFD700, 0 0 10px #FFD700, 0 0 15px #FF8C00; }
+            100% { text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 25px #FF4500; }
+        }
+        .btn {
+            padding: 15px 30px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .yes {
+            background-color: #32CD32;
+            color: black;
+        }
+        .no {
+            background-color: #FF4500;
+            color: black;
+        }
+        .btn:hover {
+            opacity: 0.8;
+            transform: scale(1.1);
+        }
+        #response {
+            margin-top: 20px;
+        }
+        img {
+            width: 300px;
+            border-radius: 10px;
+            margin: 10px;
+            box-shadow: 0 0 10px #FFD700;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #FFD700;
+        }
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 18px;
+            color: #FFD700;
+        }
+    </style>
+</head>
+<body>
+    <h1>Will you be my date the day after Valentine's?</h1>
+    <button class="btn yes" onclick="showYesResponse()">Yes</button>
+    <button class="btn no" onclick="showNoResponse()">No</button>
+    <div id="response"></div>
+    <div class="footer">Loved, Alexxx</div>
+
+    <script>
+        function showYesResponse() {
+            document.getElementById('response').innerHTML = `
+                <h2>Thank you! I will make every second count ❤️</h2>
+                <video controls>
+                    <source src="v09044g40000clkjn8fog65rhfsbk7c0.MP4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+        }
+        function showNoResponse() {
+            document.getElementById('response').innerHTML = `
+                <h2>Sure kana? 😢</h2>
+                <img src="https://media.tenor.com/KnZtCOHAp7IAAAAC/malupiton-malupiton-dila.gif" alt="Sad GIF">
+            `;
+        }
+    </script>
+</body>
+</html>
